@@ -9,7 +9,7 @@ const Navbar = () => {
     <NavLink to="/contact"><li><a>Contact</a></li></NavLink>
     </>
     return (
-        <div>
+        <div className="mb-16">
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -33,7 +33,7 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl"><span className="font-bold text-5xl Rancho text-[#FF3811]">Velocity</span><sub className="text-md hover:text-white">Vault</sub></a>
+                    <a className="btn btn-ghost text-xl"><span className="font-bold text-5xl Rancho text-[#FF3811] hover:text-white">Velocity</span><sub className="text-md hover:text-white">Vault</sub></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
