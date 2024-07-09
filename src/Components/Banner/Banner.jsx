@@ -13,7 +13,7 @@ const Banner = () => {
                             <p className="text-white text-roboto">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                             <div>
                                 <button className="btn border-none mr-5 bg-[#FF3811] text-white ">Discover More</button>
-                                <button className="btn btn-outline border-white text-white hover:bg-[]">Latest Project</button>
+                                <button className="btn btn-outline border-white text-white">Latest Project</button>
                             </div>
                         </div>
                     </div>
@@ -22,7 +22,7 @@ const Banner = () => {
                         <a href="#slide2" className="btn btn-circle hover:bg-[#FF3811] hover:text-white border-none">❯</a>
                     </div>
                 </div>
-                <div id="slide1" className="carousel-item relative w-full ">
+                <div id="slide2" className="carousel-item relative w-full ">
                     <img
                         src="https://i.postimg.cc/fL4f2gJ3/4.jpg"
                         className="w-full h-[750px]" />
@@ -32,16 +32,16 @@ const Banner = () => {
                             <p className="text-white text-roboto">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                             <div>
                                 <button className="btn border-none mr-5 bg-[#FF3811] text-white ">Discover More</button>
-                                <button className="btn btn-outline border-white text-white hover:bg-[]">Latest Project</button>
+                                <button className="btn btn-outline border-white text-white ">Latest Project</button>
                             </div>
                         </div>
                     </div>
                     <div className="absolute left-5 right-12 bottom-3 justify-end gap-5 flex -translate-y-1/2 transform">
-                        <a href="#slide4" className="btn btn-circle hover:bg-[#FF3811] hover:text-white border-none">❮</a>
-                        <a href="#slide2" className="btn btn-circle hover:bg-[#FF3811] hover:text-white border-none">❯</a>
+                        <a href="#slide1" className="btn btn-circle hover:bg-[#FF3811] hover:text-white border-none">❮</a>
+                        <a href="#slide3" className="btn btn-circle hover:bg-[#FF3811] hover:text-white border-none">❯</a>
                     </div>
                 </div>
-                <div id="slide1" className="carousel-item relative w-full ">
+                <div id="slide3" className="carousel-item relative w-full ">
                     <img
                         src="https://i.postimg.cc/8z0HWCGm/3.jpg"
                         className="w-full h-[750px]" />
@@ -51,16 +51,16 @@ const Banner = () => {
                             <p className="text-white text-roboto">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                             <div>
                                 <button className="btn border-none mr-5 bg-[#FF3811] text-white ">Discover More</button>
-                                <button className="btn btn-outline border-white text-white hover:bg-[]">Latest Project</button>
+                                <button className="btn btn-outline border-white text-white ">Latest Project</button>
                             </div>
                         </div>
                     </div>
                     <div className="absolute left-5 right-12 bottom-3 justify-end gap-5 flex -translate-y-1/2 transform">
-                        <a href="#slide4" className="btn btn-circle hover:bg-[#FF3811] hover:text-white border-none">❮</a>
-                        <a href="#slide2" className="btn btn-circle hover:bg-[#FF3811] hover:text-white border-none">❯</a>
+                        <a href="#slide2" className="btn btn-circle hover:bg-[#FF3811] hover:text-white border-none">❮</a>
+                        <a href="#slide4" className="btn btn-circle hover:bg-[#FF3811] hover:text-white border-none">❯</a>
                     </div>
                 </div>
-                <div id="slide1" className="carousel-item relative w-full ">
+                <div id="slide4" className="carousel-item relative w-full ">
                     <img
                         src="https://i.postimg.cc/vBWLpLV0/1.jpg"
                         className="w-full h-[750px]" />
@@ -70,13 +70,13 @@ const Banner = () => {
                             <p className="text-white text-roboto">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                             <div>
                                 <button className="btn border-none mr-5 bg-[#FF3811] text-white ">Discover More</button>
-                                <button className="btn btn-outline border-white text-white hover:bg-[]">Latest Project</button>
+                                <button className="btn btn-outline border-white text-white ">Latest Project</button>
                             </div>
                         </div>
                     </div>
                     <div className="absolute left-5 right-12 bottom-3 justify-end gap-5 flex -translate-y-1/2 transform">
-                        <a href="#slide4" className="btn btn-circle hover:bg-[#FF3811] hover:text-white border-none">❮</a>
-                        <a href="#slide2" className="btn btn-circle hover:bg-[#FF3811] hover:text-white border-none">❯</a>
+                        <a href="#slide3" className="btn btn-circle hover:bg-[#FF3811] hover:text-white border-none">❮</a>
+                        <a href="#slide1" className="btn btn-circle hover:bg-[#FF3811] hover:text-white border-none">❯</a>
                     </div>
                 </div>
                
