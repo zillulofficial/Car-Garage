@@ -2,15 +2,15 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const navLinks= <>
-    <NavLink to="/"><li><a>Home</a></li></NavLink>
-    <NavLink to="/about"><li><a>About</a></li></NavLink>
-    <NavLink to="/services"><li><a>Services</a></li></NavLink>
-    <NavLink to="/blog"><li><a>Blog</a></li></NavLink>
-    <NavLink to="/contact"><li><a>Contact</a></li></NavLink>
+    <li><NavLink to="/">Home</NavLink></li>
+    <li><NavLink to="/about">About</NavLink></li>
+    <li><NavLink to="/services">Services</NavLink></li>
+    <li><NavLink to="/blog">Blog</NavLink></li>
+    <li><NavLink to="/contact">Contact</NavLink></li>
     </>
     return (
-        <div className="mb-16">
-            <div className="navbar bg-base-100">
+        <div className="mb-12">
+            <div className="navbar bg-base-100 h-24">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,7 +41,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <button className="btn text-[#FF3811] bg-white border border-[#FF3811] hover:text-white hover:bg-[#FF3811]">Appointment</button>
+                    <button className="btn text-[#FF3811] bg-white border border-[#FF3811] hover:text-white hover:bg-[#FF3811] hover:border-none">Appointment</button>
                 </div>
             </div>
         </div>
