@@ -5,7 +5,7 @@ const Banner = () => {
             <div className="carousel w-full md:min-h-[750px] rounded-xl mb-24">
                 <div id="slide1" className="carousel-item relative w-full ">
                     <img
-                        src="https://i.postimg.cc/5ybq1Y5b/5.jpg"
+                        src="https://i.postimg.cc/fL4f2gJ3/4.jpg"
                         className="w-full lg:h-[750px]" />
                     <div className="absolute h-full top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] gap-5  w-1/3 flex items-center">
                         <div className="pl-12 space-y-4 md:space-y-7">
@@ -24,7 +24,7 @@ const Banner = () => {
                 </div>
                 <div id="slide2" className="carousel-item relative w-full ">
                     <img
-                        src="https://i.postimg.cc/fL4f2gJ3/4.jpg"
+                        src="https://i.postimg.cc/5ybq1Y5b/5.jpg"
                         className="w-full lg:h-[750px]" />
                     <div className="absolute h-full top-0 bg-gradient-to-r from-[#151515] gap-5  w-1/3 flex items-center">
                         <div className="pl-12 space-y-4 md:space-y-7">

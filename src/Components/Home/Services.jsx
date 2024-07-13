@@ -13,7 +13,7 @@ const Services = () => {
         })
     },[])
     return (
-        <div className="mx-auto mb-24">
+        <div className="container mx-auto mb-24">
             <div className="text-center space-y-5 mb-16">
                 <p className="text-[#FF3811] text-xl font-bold">Services</p>
                 <h2 className="font-bold text-5xl">Our Service Area</h2>
@@ -26,7 +26,7 @@ const Services = () => {
                 }
             </div>
                 <div className=" text-center">
-                <button className="btn btn-outline border-[#FF3811] text-[#FF3811] w-[170px]">More Services</button>
+                <button className="btn btn-outline border-[#FF3811] text-[#FF3811] w-[170px] hover:bg-slate-200 hover:border-none">More Services</button>
                 </div>
 
         </div>
