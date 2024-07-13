@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDVSC-p6w4Pl3IqB10qJwNBmX-_7R-gCgA",
-  authDomain: "car-garage-cfd09.firebaseapp.com",
-  projectId: "car-garage-cfd09",
-  storageBucket: "car-garage-cfd09.appspot.com",
-  messagingSenderId: "1047168235513",
-  appId: "1:1047168235513:web:fa0c4ea79f7502ae15af28"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase

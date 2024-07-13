@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+
+const SecondNavbar = () => {
     const navLinks= <>
-    <li><NavLink to="/">Home</NavLink></li>
-    <li><NavLink to="/about">About</NavLink></li>
-    <li><NavLink to="/services">Services</NavLink></li>
-    <li><NavLink to="/blog">Blog</NavLink></li>
-    <li><NavLink to="/contact">Contact</NavLink></li>
+    <NavLink to="/order"><li><a className="hover:bg-[#ff3838cb] hover:text-white">Order</a></li></NavLink>
+    <NavLink to="/orderReview"><li><a className="hover:bg-[#ff3838cb] hover:text-white">Order Review</a></li></NavLink>
+    <NavLink to="/manage"><li><a className="hover:bg-[#ff3838cb] hover:text-white">Manage Inventory</a></li></NavLink>
+    <NavLink to="/login"><li><a className="hover:bg-[#ff3838cb] hover:text-white">Login</a></li></NavLink>
     </>
     return (
         <div className="container mx-auto mb-12">
@@ -35,17 +35,14 @@ const Navbar = () => {
                     </div>
                     <a className="btn btn-ghost text-xl"><span className="font-bold text-5xl Rancho text-[#FF3811] hover:text-white">Velocity</span><sub className="text-md hover:text-white">Vault</sub></a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {navLinks}
                     </ul>
-                </div>
-                <div className="navbar-end">
-                    <button className="btn text-[#FF3811] bg-white border border-[#FF3811] hover:text-white hover:bg-[#FF3811] hover:border-none">Appointment</button>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Navbar;
+export default SecondNavbar;
