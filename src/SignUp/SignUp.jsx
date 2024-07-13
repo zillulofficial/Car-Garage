@@ -1,55 +1,41 @@
 import SecondNavbar from "../SecondNavbar/SecondNavbar";
 import { IoMdEyeOff } from "react-icons/io";
-import { FaEye, FaFacebook } from "react-icons/fa6";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { FaEye } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
 import Swal from "sweetalert2";
-import { FcGoogle } from "react-icons/fc";
+import { AuthContext } from "../providers/AuthProvider";
 
 const SignUp = () => {
-    const navigate = useNavigate()
-    const location = useLocation()
-    const from = location?.state || '/';
-
+    const {createUser}= useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false)
     const handleSubmit = e => {
         e.preventDefault()
         const form = e.target
         const email = form.email.value
         const password = form.password.value
-        console.log(email, password)
-        login(email, password)
-            .then((result) => {
-                if (result.user) {
-                    navigate(from)
-                    Swal.fire({
-                        title: 'Success!',
-                        text: 'Logged in successfully',
-                        icon: 'success',
-                        confirmButtonText: 'Okay'
-                    })
-                }
-                console.log(result)
+        // console.log(email, password)
+        if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(password)) {
+            Swal.fire({
+                title: 'OOPS!',
+                text: 'Password is week',
+                icon: 'warning',
+                confirmButtonText: 'Okay'
             })
-            .catch(() => {
-                Swal.fire({
-                    title: 'error!',
-                    text: 'There is an error',
-                    icon: 'error',
-                    confirmButtonText: 'Okay'
-                })
-            })
-    }
+            return
+        }
 
-    const handleSocialSignIn = (socialProvider) => {
-        socialProvider()
-            .then(result => {
-                if (result.user) {
-                    console.log(result.user)
-                    navigate(from)
-                }
+        createUser(email,password)
+        .then(result=>{
+            Swal.fire({
+                title: 'Congrats!',
+                text: 'Registered successfully',
+                icon: 'success',
+                confirmButtonText: 'Okay'
             })
-            .catch(error => console.log(error))
+            console.log(result.user)
+        })
+        .catch(error=>console.log(error))
     }
     return (
         <div>
