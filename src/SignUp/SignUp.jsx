@@ -88,7 +88,7 @@ const SignUp = () => {
 
                                 <div className="flex justify-between items-center">
                                     <p>Already have an account?</p>
-                                    <Link to="/register"><button className=" text-black hover:underline hover:underline-offset-4 hover:text-[#ff3838cb] px-4 py-2 rounded-full border-none font-bold">Login</button></Link>
+                                    <Link to="/login"><button className=" text-black hover:underline hover:underline-offset-4 hover:text-[#ff3838cb] px-4 py-2 rounded-full border-none font-bold">Login</button></Link>
                                 </div>
                             </div>
                         </div>

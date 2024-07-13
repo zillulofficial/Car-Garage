@@ -2,11 +2,13 @@ import { IoMdEyeOff } from "react-icons/io";
 import SecondNavbar from "../SecondNavbar/SecondNavbar";
 import { FaEye, FaFacebook } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { FcGoogle } from "react-icons/fc";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Login = () => {
+    const {login, googleLogIn, facebookLogIn}= useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
     const from = location?.state || '/';
