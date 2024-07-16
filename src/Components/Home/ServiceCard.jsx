@@ -1,4 +1,5 @@
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 const ServiceCard = ({ service }) => {
     return (
         <div className=" mx-auto">
@@ -10,7 +11,7 @@ const ServiceCard = ({ service }) => {
                     <h2 className="card-title text-3xl font-bold Rancho">{service.title}</h2>
                     <div className="card-actions justify-end">
                         <p className="roboto text-[#FF3811] font-semibold">Price: ${service.price}</p>
-                        <FaArrowRightLong className="text-lg text-[#FF3811]"></FaArrowRightLong>
+                        <Link to={`/checkout/${service._id}`}><FaArrowRightLong className="text-lg text-[#FF3811]"></FaArrowRightLong></Link>
                     </div>
                 </div>
             </div>

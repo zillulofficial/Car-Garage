@@ -3,8 +3,9 @@ const AboutUs = () => {
     return (
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-28 md:gap-14 mb-24 md:mb-48">
             <div className="w-1/2 relative">
-                <img className="md:w-3/4 rounded-xl" src="https://i.postimg.cc/MHCpQ45D/person.jpg" alt="" />
-                <img className="md:w-1/2 w-3/4 rounded-xl absolute right-5 top-2/3 border-white border-8" src="https://i.postimg.cc/yxgNWBmx/parts.jpg" alt="" />
+                <img className="md:w-3/4 rounded-xl hover:cursor-pointer transition-all duration-200 hover:ease-out hover:scale-95" src="https://i.postimg.cc/MHCpQ45D/person.jpg" alt="" />
+                <img className="md:w-1/2 w-3/4 rounded-xl absolute right-5 top-2/3 border-white border-8 hover:cursor-pointer transition-all duration-200 hover:ease-out hover:scale-95" 
+                src="https://i.postimg.cc/yxgNWBmx/parts.jpg" alt="" />
             </div>
             <div className="md:w-[490px] mx-auto">
                 <p className="text-[#FF3811] text-2xl font-extrabold roboto mb-5">About Us</p>

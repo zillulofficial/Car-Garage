@@ -2,11 +2,11 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const navLinks= <>
-    <li><NavLink to="/">Home</NavLink></li>
-    <li><NavLink to="/about">About</NavLink></li>
-    <li><NavLink to="/services">Services</NavLink></li>
-    <li><NavLink to="/blog">Blog</NavLink></li>
-    <li><NavLink to="/contact">Contact</NavLink></li>
+    <NavLink to="/"><li><a className="hover:bg-[#ff3838cb] hover:text-white">Home</a></li></NavLink>
+    <NavLink to="/about"><li><a className="hover:bg-[#ff3838cb] hover:text-white">About</a></li></NavLink>
+    <NavLink to="/services"><li><a className="hover:bg-[#ff3838cb] hover:text-white">Services</a></li></NavLink>
+    <NavLink to="/blog"><li><a className="hover:bg-[#ff3838cb] hover:text-white">Blog</a></li></NavLink>
+    <NavLink to="/contact"><li><a className="hover:bg-[#ff3838cb] hover:text-white">Contact</a></li></NavLink>
     </>
     return (
         <div className="container mx-auto mb-12">
