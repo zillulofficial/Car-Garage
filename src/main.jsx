@@ -11,7 +11,7 @@ import AuthProvider from './providers/AuthProvider';
 import Login from './Login/Login';
 import SignUp from './SignUp/SignUp';
 import CheckOut from './CheckOut/CheckOut';
-import Bookings from './Components/Home/Bookings';
+import Booking from './Components/Booking/Booking';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/bookings",
-        element: <Bookings></Bookings>
+        element: <Booking></Booking>
       },
       {
         path: "/checkout/:id",
