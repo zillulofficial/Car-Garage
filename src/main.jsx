@@ -11,6 +11,7 @@ import AuthProvider from './providers/AuthProvider';
 import Login from './Login/Login';
 import SignUp from './SignUp/SignUp';
 import CheckOut from './CheckOut/CheckOut';
+import Bookings from './Components/Home/Bookings';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>
+      },
+      {
+        path: "/bookings",
+        element: <Bookings></Bookings>
       },
       {
         path: "/checkout/:id",
