@@ -1,5 +1,5 @@
 
-const BookingLists = ({ books, handleDelete }) => {
+const BookingLists = ({ books, handleDelete, handleBookingsStatus }) => {
 
     
     return (
@@ -43,7 +43,11 @@ const BookingLists = ({ books, handleDelete }) => {
                             </td>
                             <td className="roboto text-center">{books.date}</td>
                             <th>
-                                <button className="btn flex mx-auto bg-[#FF3811] text-white hover:bg-white hover:border-[#FF3811] hover:text-[#FF3811] ">Pending</button>
+                                {
+                                    books.status ==="Approved"? 
+                                    <button className="btn flex mx-auto bg-[#29B170] text-white hover:bg-white hover:border-[#29B170] hover:text-[#29B170] ">Approved</button>
+                                    : <button onClick={()=>handleBookingsStatus(books._id)} className="btn flex mx-auto bg-[#FF3811] text-white hover:bg-white hover:border-[#FF3811] hover:text-[#FF3811] ">Pending</button>
+                                }
                             </th>
                         </tr>
                     </tbody>
