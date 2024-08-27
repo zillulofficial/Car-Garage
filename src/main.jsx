@@ -13,6 +13,8 @@ import SignUp from './SignUp/SignUp';
 import CheckOut from './CheckOut/CheckOut';
 import Booking from './Components/Booking/Booking';
 import AboutSection from './Components/AboutSection/AboutSection';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import ContactUS from './Components/ContactUS/ContactUS';
 
 const router = createBrowserRouter([
   {
@@ -33,16 +35,20 @@ const router = createBrowserRouter([
       },
       {
         path: "/bookings",
-        element: <Booking></Booking>
+        element: <PrivateRoute><Booking></Booking></PrivateRoute>
       },
       {
         path: "/checkout/:id",
-        element: <CheckOut></CheckOut>,
+        element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
         loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
       },
       {
         path: "/about",
         element: <AboutSection></AboutSection>
+      },
+      {
+        path: "/contact",
+        element: <ContactUS></ContactUS>
       }
     ]
   },
