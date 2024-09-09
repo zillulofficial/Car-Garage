@@ -28,7 +28,7 @@ const ContactUS = () => {
                 </div>
                 <p className="mb-2">Elaborate You Concerns</p>
                 <textarea className="textarea textarea-bordered w-full" placeholder=""></textarea>
-                <button className="bg-[#23BE0A] text-white px-5 py-3 rounded-xl btn">Submit</button>
+                <button className="bg-[#ff3811] text-white px-5 py-3 rounded-xl btn">Submit</button>
             </div>
         </div>
         </div>

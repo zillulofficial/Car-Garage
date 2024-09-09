@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
     return (
@@ -15,7 +16,7 @@ const AboutUs = () => {
                     humour, or randomized words which do not look even slightly believable. </p>
                 <p className=" mb-8 mx-auto">the majority have suffered alteration in some form, by injected humour,
                     or randomized words which do not look even slightly believable. </p>
-                    <button className="btn bg-[#FF3811] text-white border-none">Get More Info</button>
+                    <Link to='/about'><button className="btn bg-[#FF3811] text-white border-none">Get More Info</button></Link>
             </div>
         </div>
     );

@@ -6,6 +6,7 @@ import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../providers/AuthProvider";
+import axios from "axios";
 
 const Login = () => {
     const {login, googleLogIn, facebookLogIn}= useContext(AuthContext)
@@ -19,9 +20,16 @@ const Login = () => {
         const form = e.target
         const email = form.email.value
         const password = form.password.value
-        console.log(email, password)
+        // console.log(email, password)
         login(email, password)
             .then((result) => {
+                const loggedInUser= result.user
+                console.log(loggedInUser);
+                const user= {email}
+                axios.post('http://localhost:5000/jwt', user, {withCredentials: true})
+                .then(res =>{
+                    console.log(res.data);
+                })
                 if (result.user) {
                     navigate(from)
                     Swal.fire({

@@ -3,19 +3,25 @@ import Navbar from "../Navbar/Navbar";
 import { AuthContext } from "../../providers/AuthProvider";
 import BookingLists from "./BookingLists";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 const Booking = () => {
     const { user } = useContext(AuthContext)
     const [bookings, setBookings] = useState([])
 
-    const url = `http://localhost:5000/bookings?email=${user.email}`
+    const url = `http://localhost:5000/bookings?email=${user?.email}`
     useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                setBookings(data)
-            })
-    }, [])
+
+        axios.get(url, {withCredentials: true})
+        .then(res=>{
+            setBookings(res.data)
+        })
+        // fetch(url)
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         setBookings(data)
+        //     })
+    }, [url])
 
     const handleDelete = id => {
         fetch(`http://localhost:5000/bookings/${id}`, {

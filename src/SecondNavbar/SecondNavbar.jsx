@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const SecondNavbar = () => {
@@ -33,7 +33,7 @@ const SecondNavbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl"><span className="font-bold text-5xl Rancho text-[#FF3811] hover:text-white">Velocity</span><sub className="text-md hover:text-white">Vault</sub></a>
+                    <Link to='/'><a className="btn btn-ghost text-xl"><span className="font-bold text-5xl Rancho text-[#FF3811] hover:text-white">Velocity</span><sub className="text-md hover:text-white">Vault</sub></a></Link>
                 </div>
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
