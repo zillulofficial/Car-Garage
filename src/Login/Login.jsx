@@ -2,14 +2,13 @@ import { IoMdEyeOff } from "react-icons/io";
 import SecondNavbar from "../SecondNavbar/SecondNavbar";
 import { FaEye, FaFacebook } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
+import {  useState } from "react";
 import Swal from "sweetalert2";
 import { FcGoogle } from "react-icons/fc";
-import { AuthContext } from "../providers/AuthProvider";
-import axios from "axios";
+import useAuth from "../Hooks/useAuth";
 
 const Login = () => {
-    const {login, googleLogIn, facebookLogIn}= useContext(AuthContext)
+    const {login, googleLogIn, facebookLogIn}= useAuth()
     const navigate = useNavigate()
     const location = useLocation()
     const from = location?.state || '/';
@@ -25,11 +24,6 @@ const Login = () => {
             .then((result) => {
                 const loggedInUser= result.user
                 console.log(loggedInUser);
-                const user= {email}
-                axios.post('http://localhost:5000/jwt', user, {withCredentials: true})
-                .then(res =>{
-                    console.log(res.data);
-                })
                 if (result.user) {
                     navigate(from)
                     Swal.fire({

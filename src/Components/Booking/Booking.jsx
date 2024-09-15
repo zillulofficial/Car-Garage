@@ -3,28 +3,24 @@ import Navbar from "../Navbar/Navbar";
 import { AuthContext } from "../../providers/AuthProvider";
 import BookingLists from "./BookingLists";
 import Swal from "sweetalert2";
-import axios from "axios";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 const Booking = () => {
     const { user } = useContext(AuthContext)
     const [bookings, setBookings] = useState([])
+    const axiosSecure= useAxiosSecure()
 
-    const url = `http://localhost:5000/bookings?email=${user?.email}`
+    const url = `/bookings?email=${user?.email}`
     useEffect(() => {
 
-        axios.get(url, {withCredentials: true})
+        axiosSecure.get(url)
         .then(res=>{
             setBookings(res.data)
         })
-        // fetch(url)
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         setBookings(data)
-        //     })
-    }, [url])
+    }, [url, axiosSecure])
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/bookings/${id}`, {
+        fetch(`https://car-doctor-server-swart-nine.vercel.app/bookings/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())
@@ -56,7 +52,7 @@ const Booking = () => {
     }
 
     const handleBookingsStatus = id => {
-        fetch(`http://localhost:5000/bookings/${id}`, {
+        fetch(`https://car-doctor-server-swart-nine.vercel.app/bookings/${id}`, {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"
